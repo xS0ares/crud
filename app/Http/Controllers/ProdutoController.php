@@ -70,7 +70,12 @@ class ProdutoController extends Controller
      */
     public function show($id)
     {
-        //
+        $produto = Produto::findOrFail($id);
+
+        //dd($produto);
+
+        return view('produto.show', ['produto' => $produto]);
+
     }
 
     /**
