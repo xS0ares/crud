@@ -75,7 +75,6 @@
                 <p>Nome: {{ $produto->nome }}</p>
                 <p>Descrição: {{ $produto->descricao }}</p>
 
-
             </div>
         </div>
     </body>
