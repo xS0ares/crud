@@ -31,12 +31,11 @@ Route::get('/produto', function () {
 });
 */
 
-
+Route::get('/produto/create', [ProdutoController::class, 'create'])->name('produto.create');
 
 Route::get('/produto/{id}', [ProdutoController::class, 'show'])->name('produto.show');
 
-
-Route::get('/produto/create', [ProdutoController::class, 'create'])->name('produto.create');
+//Route::get('item/create', 'ItemController@create')->name('item.create');
 
 Route::post('/produto', [ProdutoController::class, 'store'])->name('produto.store');
 
