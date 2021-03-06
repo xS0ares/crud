@@ -92,7 +92,7 @@
 <div class="container">
 
 
-    <a class="btn btn-block btn-success btn-lg" href="{{ URL::to('produto/create') }}">Criar</a>
+    <a class="btn btn-block btn-success btn-lg" href="{{ URL::to('produtocreate') }}">Criar</a>
     <p></p>
 
     <div class="row">
