@@ -59,7 +59,13 @@ class ProdutoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $produto = new Produto;
+        $produto->nome      = $request->nome;
+        $produto->descricao = $request->descricao;
+        $produto->save();
+
+        return redirect()->route('produto.index')->with('message', 'Produto criado com sucesso!');
+
     }
 
     /**
