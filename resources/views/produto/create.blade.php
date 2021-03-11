@@ -81,10 +81,10 @@
 
             {{ Form::label('nome', 'Nome') }}
             {{ Form::text('nome') }}
-
+            <br>
             {{ Form::label('descricao', 'Descrição') }}
             {{ Form::text('descricao') }}
-
+            <br>
             {{ Form::submit('Criar') }}
 
             {{ Form::close() }}

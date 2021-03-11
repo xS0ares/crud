@@ -61,6 +61,9 @@ class ProdutoController extends Controller
      */
     public function store(Request $request)
     {
+
+        //dd('AQUI');
+
         $produto = new Produto;
         $produto->nome      = $request->nome;
         $produto->descricao = $request->descricao;
