@@ -70,12 +70,24 @@
                 <div class="title m-b-md">
                     CREATE
                 </div>
-
+<!--
                 <form method="POST" action="/produto/create">
                     @csrf
                     <input id="nome" type="text" name="nome">
                     <input id="descricao" type="text" name="descricao">
                 </form>
+            -->
+            {{ Form::open(array('url' => '/produto/create')) }}
+
+            {{ Form::label('nome', 'Nome') }}
+            {{ Form::text('nome') }}
+
+            {{ Form::label('descricao', 'Descrição') }}
+            {{ Form::text('descricao') }}
+
+            {{ Form::submit('Criar') }}
+
+            {{ Form::close() }}
 
             </div>
         </div>

@@ -23,19 +23,9 @@ Route::get('/', function () {
 
 Route::get('/produto', [ProdutoController::class, 'index'])->name('produto.index');
 
-
-/*
-
-Route::get('/produto', function () {
-    dd('ENTROU');
-});
-*/
-
 Route::get('/produto/create', [ProdutoController::class, 'create'])->name('produto.create');
 
 Route::get('/produto/{id}', [ProdutoController::class, 'show'])->name('produto.show');
-
-//Route::get('item/create', 'ItemController@create')->name('item.create');
 
 Route::post('/produto', [ProdutoController::class, 'store'])->name('produto.store');
 
