@@ -61,6 +61,18 @@ class ProdutoController extends Controller
      */
     public function store(Request $request)
     {
+
+        $message = [
+            'nome.required' => 'O campo nome é obrigatório!',
+            'nome.min' => 'O campo nome precisa ser maior do que :min !',
+            'descricao.required' => 'O campo descrição é obrigatório!',
+        ];
+
+        $validatedData = $request->validate([
+            'nome' => 'required|min:8',
+            'descricao' => 'required',
+        ], $message);
+
         $produto = new Produto;
         $produto->nome      = $request->nome;
         $produto->descricao = $request->descricao;
